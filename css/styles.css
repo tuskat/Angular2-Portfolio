@@ -1,0 +1,231 @@
+/* Dem fonts */
+@font-face {
+    font-family: Biko;
+    src: url(fonts/Biko_Regular.otf);
+}
+@font-face {
+    font-family: Canter3d;
+    src: url(fonts/CanterBold3D.otf);
+}
+/* misc */
+
+
+/* Master Styles */
+
+h2, h3 {
+  color: #fff;
+  font-family: "Biko";
+  font-weight: lighter;
+}
+body {
+    margin:0;
+    padding:0;
+ /*the black gradient*/
+background: rgba(12,14,13,1);
+background: -moz-linear-gradient(top, rgba(12,14,13,1) 0%, rgba(10,11,10,1) 8%, rgba(7,8,8,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(12,14,13,1)), color-stop(8%, rgba(10,11,10,1)), color-stop(100%, rgba(7,8,8,1)));
+background: -webkit-linear-gradient(top, rgba(12,14,13,1) 0%, rgba(10,11,10,1) 8%, rgba(7,8,8,1) 100%);
+background: -o-linear-gradient(top, rgba(12,14,13,1) 0%, rgba(10,11,10,1) 8%, rgba(7,8,8,1) 100%);
+background: -ms-linear-gradient(top, rgba(12,14,13,1) 0%, rgba(10,11,10,1) 8%, rgba(7,8,8,1) 100%);
+background: linear-gradient(to bottom, rgba(12,14,13,1) 0%, rgba(10,11,10,1) 8%, rgba(7,8,8,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0e0d', endColorstr='#070808', GradientType=0 );
+ /* end*/
+}
+
+.title {
+    font-size:8rem;
+    color: #fff;
+  font-family: Canter3d;
+  text-align: center;
+  padding:1rem 2rem 3rem;
+  margin:0 auto;
+  max-width: 20rem;
+  border:1px solid #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.header {
+    padding-top:1rem;
+    height:25%;
+    display:block;
+    background: rgba(20,30,48, 0.25); /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, rgba(20,30,48, 0.25) , rgba(36,59,85,0.5)); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, rgba(20,30,48, 0.25) , rgba(36,59,85,0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */         
+      margin-bottom:3rem;
+
+-webkit-box-shadow: 0 3px 2px rgba(20,30,48, 0.25);
+	-moz-box-shadow: 0 3px 2px rgba(20,30,48, 0.25);
+	box-shadow: 0 3px 2px rgba(20,30,48, 0.25);
+}
+
+.content {
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: all 1s ease-in-out;
+    backface-visibility: hidden;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+}
+
+.flipped {
+    transform: rotateY( 180deg );
+    opacity: 0;
+    visibility: hidden;
+}
+
+.footer {
+    color:#fff;
+    text-align:right;
+    font-family:"Biko";
+    position:fixed;
+    bottom:0;
+    right:0;
+    z-index:4;
+    
+}
+.footer p {
+    display:inline;
+    font-size:12px;
+    border : 1px solid #fff;
+    padding:1rem;
+    margin:0;
+    border-top-left-radius: 10px;
+    border-bottom:none;
+    border-right:none;
+
+     background: rgba(20,30,48, 0.25); /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, rgba(20,30,48, 0.25) , rgba(36,59,85,0.5)); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, rgba(20,30,48, 0.25) , rgba(36,59,85,0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */         
+}
+
+.detail {
+    display:inline-block;
+    backface-visibility: hidden;
+    width:30%;
+    min-width:320px;
+    max-width:500px;
+    margin:1rem;
+   
+}
+.detail img {
+     transition: transform 200ms ease-in-out;
+      transform: perspective( 600px ) rotateY( 0deg );
+      backface-visibility: hidden;
+}
+
+.slide-description {
+    position: absolute;
+    top: 27.5%;
+    padding-top:2rem;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    bottom:0;
+    color:#fff;
+    font-family:"Biko";
+    opacity: 0;
+    visibility: hidden;
+    z-index:-1;
+    transform: rotateY( 180deg );
+    transition: all 1s ease-in-out;
+
+    background: rgba(12,14,13,1);
+background: -moz-linear-gradient(top, rgba(12,14,13,1) 0%, rgba(10,11,10,1) 8%, rgba(7,8,8,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(12,14,13,1)), color-stop(8%, rgba(10,11,10,1)), color-stop(100%, rgba(7,8,8,1)));
+background: -webkit-linear-gradient(top, rgba(12,14,13,1) 0%, rgba(10,11,10,1) 8%, rgba(7,8,8,1) 100%);
+background: -o-linear-gradient(top, rgba(12,14,13,1) 0%, rgba(10,11,10,1) 8%, rgba(7,8,8,1) 100%);
+background: -ms-linear-gradient(top, rgba(12,14,13,1) 0%, rgba(10,11,10,1) 8%, rgba(7,8,8,1) 100%);
+background: linear-gradient(to bottom, rgba(12,14,13,1) 0%, rgba(10,11,10,1) 8%, rgba(7,8,8,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0e0d', endColorstr='#070808', GradientType=0 );
+}
+
+.slide-description h2, p {
+    text-align: center;
+    margin: 2rem;
+}
+.dismiss {
+    position:absolute;
+    right:1rem;
+    font-size:1.5rem;
+    transition:text-shadow 200ms ease-in-out;
+}
+.dismiss:hover {
+  text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+}
+ 
+ .slide-description img {
+        display:block;
+    width:80%;
+    height:auto;
+    min-width:320px;
+    margin:auto;
+         -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent) , to(rgba(250, 250, 250, 0.1)));
+ }
+
+.slide-description.flipped {
+transform: rotateY(0deg);
+height:auto;
+ overflow:visible;
+opacity: 1;
+visibility: visible;
+z-index:3;
+}
+
+.slide {
+    width: auto;
+    max-width:100%;
+}
+
+.slide h2 {
+    text-align: center;
+}
+
+.slide img {
+    width:inherit;
+    max-width:100%;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent) , to(rgba(250, 250, 250, 0.1)));
+}
+@media only screen and (min-width:1025px) {
+.detail:hover img{
+ transform: perspective( 600px ) rotateY( 0deg );
+}
+
+.detail:nth-child(3n+1):hover img{
+ transform: perspective( 600px ) rotateY( 5deg );
+}
+
+.detail:nth-child(3n+0):hover img{
+ transform: perspective( 600px ) rotateY( -5deg );
+}    
+}
+
+@media only screen and (min-width: 426px) and (max-width: 1024px) {
+.detail:nth-child(odd):hover img{
+ transform: perspective( 600px ) rotateY( 5deg );
+}
+.detail:nth-child(even):hover img{
+ transform: perspective( 600px ) rotateY( -5deg );
+}
+}
+
+
+@media only screen and (max-width: 425px) {
+body {
+    margin:0;
+}
+.detail  {
+    display:block;
+    margin:0;
+    padding:0;
+    width: auto;
+}
+
+.title {
+    font-size:6rem;
+}
+}
+
